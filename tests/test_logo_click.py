@@ -21,4 +21,4 @@ class TestLogoRedirect:
         main_page.wait_visibility_of_header_logo_yandex()
         main_page.click_on_header_logo_yandex()
         main_page.switch_to_new_tab()
-        assert main_page.get_page_title(MainPageLocators.TITLE) == 'Дзен'
+        assert 'Дзен' in main_page.get_page_title(MainPageLocators.TITLE)

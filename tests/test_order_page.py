@@ -8,8 +8,8 @@ from conftest import driver
 class TestOrderPageOrder:
     @allure.title('Проверка возможности оформить заказ Самоката')
     @allure.description('Наборы тестов проверяющие успешное оформление заказа с главной страницы и хедэра')
-    @pytest.mark.parametrize('order_button', [(MainPageLocators.HEADER_ORDER_BUTTON),
-                                              (MainPageLocators.MAIN_ORDER_BUTTON)])
+    @pytest.mark.parametrize('order_button', [MainPageLocators.HEADER_ORDER_BUTTON,
+                                              MainPageLocators.MAIN_ORDER_BUTTON])
     def test_order_all_fields_success(self, driver, order_button):
         order_page = OrderPage(driver)
         order_page.scroll_to_faq(order_button)
